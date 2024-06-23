@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package edf_service;
+
+service EdfService {
+  rpc StreamEdfData (EdfRequest) returns (stream EdfData);
+}
+
+message EdfRequest {
+}
+
+message EdfData {
+  string data = 1;
+}
